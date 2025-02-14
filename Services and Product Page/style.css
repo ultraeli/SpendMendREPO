@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, Helvetica;
+    background-color: beige;
+    box-sizing: border-box;
+}
+
+/*---- Title ----*/
+
+.text-box{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 21, 128, 0.6),rgba(0, 21, 128, 0.6)),url(images/1.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.text-cont{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: left;
+    background-color: transparent;
+}
+.text-cont h1{
+    font-size: 62px;
+    background-color: transparent;
+}
+.text-cont p{
+    margin: 10px 0 40px;
+    font-size: 28px;
+    color: #fff;
+    background-color: transparent;
+}
+
+/*---- Inquire Now Btn ----*/
+
+.inquire-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #e0e0e0;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 12px 34px;
+    font-size: 13px;
+    font-weight: 600;
+    background: #001580;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.inquire-btn:hover{
+    border: 1px solid #425eec;
+    background: #425eec;
+}
+
+/*---- Packages Style ----*/
+
+.packages-col{
+    flex-basis: 31%;
+    border-radius: 5px;
+    border: 0.5px solid #D7D4D7;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+.packages-col h3{
+    text-align: center;
+    font-weight: 604;
+    margin: 10px 0;
+}
+.fa-check-circle{
+    color: #001580;
+}
+.togglemenucol{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    background-color: transparent;
+}
+.togglemenucol h1{
+    font-size: 36px;
+    font-weight: 600;
+  
+}
+.togglemenucol p{
+    color: #212121;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+  
+}
+
+
+/*---- Tabs ----*/
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 8px 8px;
+    font-size: 13px;
+    font-weight: 600;
+
+}
+.tab button {
+    background-color: inherit;
+    float: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+.tab button:hover {
+    background-color: #001580;
+    border-radius: 5px;
+}
+.tab button.active {
+    background-color: #ccc;
+    color: rgb(159, 53, 53);
+}
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+.rowpkg p{
+    text-align: left;
+}
+.columnpkg {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+.rowpkg:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*---- Mobile Compat ----*/
+@media(max-width: 600px){
+    .text-box h1{
+        font-size: 30px;
+        text-align: center;
+  }
+    .text-box p{
+        font-size: 10px;
+        text-align: center;
+  }
+    .columnpkg {
+    width: 100%;
+  }
+}
+
+
+/*---- Animation ----*/
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.slide-in-right {
+  animation: slideInFromRight 1s forwards; 
+  opacity: 0; 
+}
+
+.slide-in-right:nth-child(1) {
+  animation-duration: 0.8s;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+#textanim {
+  opacity: 1; 
+  transition: opacity 0.7s ease;
+}
+#columnanim1 {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+#columnanim2 {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+.hidden {
+  opacity: 0; 
+}
+
+
+
+
+
+
